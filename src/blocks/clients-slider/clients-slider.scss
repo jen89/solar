@@ -1,0 +1,58 @@
+.clients-slider {
+	$self: &;
+	&__box {
+		display: flex;
+		margin-bottom: 32px;
+		@include media ('<=md'){
+			display: block;
+		}
+	}
+
+	&__box-img {
+		flex-basis: 510px;
+		margin-right: 90px;
+		@include media ('<=md'){
+			width: 100%;
+			object-fit: cover;
+			height: 300px;
+			
+		}
+	}
+
+	&__box-title {
+		font-weight: 700;
+		margin-bottom: 30px;
+		@include media ('<=md'){
+			margin-top: 50px;
+		}
+	}
+	
+	&__box-list {
+		margin-left: 50px;
+		margin-bottom: 65px;
+		@include media ('<=xxs'){
+			margin-left: 0;
+		}
+	}
+	
+	&__box-item {
+		@extend %default-font;
+		margin-bottom: 15px;
+	}
+	
+	&__arrow {
+		position: absolute;
+		left: 275px;
+		bottom: -3px;
+		cursor: pointer;
+		z-index: 5;
+		border: none;
+		background: none;
+		&:hover path {
+			fill: #A9A32A;
+		}
+		@include media ('<=md'){
+			display: none;;
+		}
+	}
+}

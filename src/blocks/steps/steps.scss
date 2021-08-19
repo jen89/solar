@@ -1,0 +1,55 @@
+.steps {
+	$self: &;
+	margin-bottom: 150px;
+	&__inner {
+		display: flex;
+		@include media ('<=lg'){
+			flex-wrap: wrap;
+		}
+	}
+
+	&__content {
+		margin-right: 90px;
+		@include media ('<lg'){
+			margin-right: 0;
+		}
+	}
+
+	&__list {
+		padding: 0;
+		counter-reset: number;
+	}
+
+	&__list-item {
+		margin-bottom: 30px;
+		counter-increment: number;
+		&::before {
+			content: '0' counter(number);
+			color:#868585;
+			@extend %default-font;
+		}
+		&:nth-child(n + 10)::before {
+			content:  counter(number);
+		}
+	}
+
+	&__list-title {
+		font-weight: 700;
+		margin-bottom: 5px;
+		margin-top: 11px;
+	}
+
+	&__list-text {
+		@extend %default-font;
+	}
+
+	&__img {
+		flex-basis: 600px;
+		@include media ('<=lg'){
+			flex-basis: 100%;
+			height: 300px;
+			object-fit: cover;
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.header {
+	$self: &;
+	background: url(images/bg-header.jpg)top center/cover no-repeat transparent;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #fff;
+	padding: 70px 10px 38px;
+	box-sizing: border-box;
+	&__subtitle {
+		@extend %title-font;
+		font-weight: normal;		
+		margin-top: auto;
+		@include media ('<=xs') {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	&__title {
+		font-family: 'Noto Sans', sans-serif;
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 87px;
+		text-transform: uppercase;
+		@include media ('<=sm') {
+			font-size: 48px;
+			line-height: 56px;
+		}
+		@include media ('<=xs') {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+	
+	&__title  span{
+		font-size: 42px;
+		line-height: 57px;
+		display: block;
+		margin-bottom: 3px;
+		@include media ('<=sm') {
+			font-size: 32px;
+			line-height: 40px;
+		}
+		@include media ('<=xs') {
+			font-size: 22px;
+			line-height: 28px;
+		}
+	}
+
+	&__button {
+		margin-top: 50px;
+		margin-bottom: auto;
+		align-self: center;
+	}
+}

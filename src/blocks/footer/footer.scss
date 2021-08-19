@@ -1,0 +1,78 @@
+.footer {
+	$self: &;
+	background: url(images/bg-footer.jpg) center/cover no-repeat transparent;
+	color: #fff;
+	padding: 70px 0 50px;
+	&__top {
+		display: flex;
+		margin-bottom: 150px;
+		@include media ('<=sm'){
+			flex-wrap: wrap;
+			margin-bottom: 75px;
+		}
+	}
+
+	&__form {
+		flex-basis: 510px;
+		margin-right: 91px;
+		@include media ('<=sm'){
+			flex-basis: 100%;
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		color:#fff;
+		margin-bottom: 60px;
+		text-transform: uppercase;
+		@extend %title-font;
+	}
+
+	&__contacts {
+		flex-basis: 600px;
+	}
+
+	&__item {
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include media ('<=sm'){
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	.logo {
+		@include media ('<=sm'){	
+			width: 100%;
+			margin: 20px 0;
+		}
+	}
+
+	&__bottom-link {
+		@extend %default-font;
+		margin-top: 10px;
+	}
+
+	.social {
+		margin-right: -10px;
+	}
+	.button {
+		$self: &;	
+		&__text {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24px;
+			font-family: 'Noto Sans', sans-serif;
+		}
+	}
+
+}

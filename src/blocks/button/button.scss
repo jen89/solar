@@ -1,0 +1,21 @@
+.button {
+	$self: &;	
+	background: transparent;
+	border: none;
+	align-self: flex-start;
+	&__text {
+		display: inline-block;
+		font-weight: normal;
+		margin-bottom: -16px;
+		transform: translateY(-16px);
+		margin-left: -57px;
+	}
+
+	&:hover .button__path {
+		fill: #A9A32A;
+	}
+
+	.button__path {
+		transition: fill .5s;
+	}
+}

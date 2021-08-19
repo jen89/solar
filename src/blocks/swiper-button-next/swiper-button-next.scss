@@ -1,0 +1,7 @@
+.swiper-button-next {
+	$self: &;
+	left: 340px;
+	@include media ('<=sm'){
+		left: calc(50% + 10px);
+	}
+}

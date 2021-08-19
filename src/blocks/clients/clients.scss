@@ -1,0 +1,26 @@
+.clients {
+	$self: &;
+	margin-bottom: 150px;
+	@include media ('<=xs'){
+		margin-bottom: 75px;
+	}
+	.swiper-pagination-bullets {
+		display: none;
+		@include media ('<=md'){
+			display: block;
+			bottom: 56%;
+		}
+		@include media ('<=xxs'){
+			display: block;
+			bottom: 58%;
+		}
+	}
+	.swiper-pagination-bullet {
+		@include media ('<=md'){
+			background-color: #A9A32A;
+			width: 10px;
+			height: 10px;
+		}
+	}
+	
+}

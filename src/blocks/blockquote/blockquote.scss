@@ -1,0 +1,29 @@
+.blockquote {
+	$self: &;
+	margin: 150px 0;
+	padding: 128px 10px 144px;
+	background: url(images/bg-blockquote.jpg)center/ cover no-repeat;
+	text-align: center;
+	@include media ('<=xs'){
+		margin: 75px 0;
+		padding: 60px 10px 80px;
+	}
+
+	&__text {
+		max-width: 670px;
+		margin: 0 auto;
+		font-size: 42px;
+		line-height: 57px;
+		color: #fff;
+		font-weight: 400;
+		@include media ('<=sm'){
+			font-size: 28px;
+			line-height: 32px;
+		}
+		@include media ('<=xxs'){
+			font-size: 22px;
+			line-height: 28px;
+		}
+	}
+
+}

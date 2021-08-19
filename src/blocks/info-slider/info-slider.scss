@@ -1,0 +1,46 @@
+.info-slider {
+	$self: &;
+	@include media ('<=sm'){
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	&__item {
+		display: flex;
+		min-width: 0;
+		@include media ('<=sm'){
+			flex-wrap: wrap;
+		}
+	}
+
+	&__img {
+		margin-right: 40px;
+		@include media ('<=sm'){
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 25px;
+			height: 200px;
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		padding-bottom: 15px;
+		@extend %default-font;
+		display: block;
+	}
+
+	&__arrow {
+		position: absolute;
+		left: 275px;
+		bottom: -3px;
+		cursor: pointer;
+		z-index: 5;
+		border: none;
+		background: none;
+		@include media ('<=xxs'){
+			text-align: center;
+		}
+	}
+
+}

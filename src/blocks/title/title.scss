@@ -1,0 +1,10 @@
+.title {
+	$self: &;
+	@extend %title-font;
+	margin-bottom: 60px;
+	color: #868585;
+	text-transform: uppercase;
+	@include media ('<=xlg'){
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,17 @@
+.input {
+	$self: &;
+	display: block;
+	width: 100%;
+	color: #fff;
+	background: transparent;
+	border: none;
+	@extend %default-font;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 60px;
+	::placeholder {
+		@extend %default-font;
+		color: #fff;
+
+	}
+}

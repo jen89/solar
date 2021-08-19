@@ -1,0 +1,7 @@
+.swiper-button-prev {
+	$self: &;
+	@include media ('<=sm'){
+		left: calc(50% - 50px);
+	}
+
+}
